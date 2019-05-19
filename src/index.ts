@@ -34,11 +34,17 @@ const light1 = new BABYLON.HemisphericLight(
   new BABYLON.Vector3(0, 5, 0),
   scene,
 );
+light1.intensity = 0.66;
+light1.diffuse = BABYLON.Color3.FromHexString("#D72AEA");
+light1.groundColor = BABYLON.Color3.FromHexString("#7528FB");
 const light2 = new BABYLON.PointLight(
   "Omni",
   new BABYLON.Vector3(0, 5, 0),
   scene,
 );
+
+light2.diffuse = BABYLON.Color3.FromHexString("#72CDFF");
+light2.specular = BABYLON.Color3.FromHexString("#FF00D5");
 
 // start up pixi scene
 const {pixiRenderer, stage} = pixiScene(engine, canvas);
