@@ -1,4 +1,5 @@
 import * as BABYLON from "babylonjs";
+import "babylonjs-inspector";
 import * as PIXI from "pixi.js";
 
 const canvas: any = document.getElementById("canvas");
@@ -6,17 +7,23 @@ const canvas: any = document.getElementById("canvas");
 const engine = new BABYLON.Engine(canvas, true);
 const scene = new BABYLON.Scene(engine);
 
+//scene.debugLayer.show();
+
 //
 // Camera
 //
 const camera = new BABYLON.FreeCamera(
   "camera1",
-  new BABYLON.Vector3(0, 4, -2),
+  new BABYLON.Vector3(0, 16.972024060235082, -8.47697425921948),
   scene,
 );
 camera.setTarget(BABYLON.Vector3.Zero());
 camera.attachControl(canvas, false);
 // camera.inputs.clear();
+
+// Enable VR
+//var vrHelper = scene.createDefaultVRExperience({createDeviceOrientationCamera:false});
+//vrHelper.enableTeleportation({floorMeshes: [environment.ground]});
 
 //
 // Lighting
@@ -66,8 +73,7 @@ sprite.anchor.set(0.5);
 sprite.position.set(canvas.width / 2, canvas.height / 2);
 stage.addChild(sprite);
 
-BABYLON.Effect.ShadersStore.basicPixelShader =
-	      `
+BABYLON.Effect.ShadersStore.basicPixelShader = `
             uniform float time;
             uniform vec2 mousePos;
             uniform vec2 resolution;
@@ -294,6 +300,7 @@ glass.reflectivityColor = new BABYLON.Color3(0.2, 0.2, 0.2);
 glass.albedoColor = new BABYLON.Color3(0.85, 0.85, 0.85);
 sphereGlass.material = glass;
 
+
 let time = 0;
 scene.registerBeforeRender(() => {
       // falseCam.update();
@@ -304,9 +311,9 @@ scene.registerBeforeRender(() => {
 engine.runRenderLoop(() => {
   scene.render();
   engine.wipeCaches(true);
-
   pixiRenderer.reset();
-  pixiRenderer.render(stage);
+  pixiRenderer.render(stage);\
+  console.log(camera.position);
 });
 
 window.addEventListener("resize", () => {

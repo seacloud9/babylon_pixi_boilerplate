@@ -755,10 +755,38 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
+"@types/prop-types@*":
+  version "15.7.1"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.1.tgz#f1a11e7babb0c3cad68100be381d1e064c68f1f6"
+  integrity sha512-CFzn9idOEpHrgdw8JsoTkaDDyRWk1jrzIV8djzcgpq0y9tG4B4lFT+Nxh52DVpDXV+n4+NPNv7M1Dj5uMp6XFg==
+
 "@types/q@^1.5.1":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
+
+"@types/react-dom@~16.0.9":
+  version "16.0.11"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.11.tgz#bd10ccb0d9260343f4b9a49d4f7a8330a5c1f081"
+  integrity sha512-x6zUx9/42B5Kl2Vl9HlopV8JF64wLpX3c+Pst9kc1HgzrsH+mkehe/zmHMQTplIrR48H2gpU7ZqurQolYu8XBA==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*":
+  version "16.8.17"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.17.tgz#f287b76a5badb93bc9aa3f54521a3eb53d6c2374"
+  integrity sha512-pln3mgc6VfkNg92WXODul/ONo140huK9OMsx62GlBlZ2lvjNK86PQJhYMPLO1i66aF5O9OPyZefogvNltBIszA==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@~16.7.3":
+  version "16.7.22"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.22.tgz#5bc6d166d5ac34b835756f0b736c7b1af0043e81"
+  integrity sha512-j/3tVoY09kHcTfbia4l67ofQn9xvktUvlC/4QN0KuBHAXlbU/wuGKMb8WfEb/vIcWxsOxHv559uYprkFDFfP8Q==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
 
 abab@^2.0.0:
   version "2.0.0"
@@ -980,6 +1008,47 @@ babylon-walk@^1.0.2:
     babel-runtime "^6.11.6"
     babel-types "^6.15.0"
     lodash.clone "^4.5.0"
+
+babylonjs-gltf2interface@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-4.0.3.tgz#e81cc65fac93b723feef4980b7497fa4643a8c4c"
+  integrity sha512-ys8cEhlkYmBCJ3F/aBemVNKPkaV5fPghR4wgQfvUTNCF9pFlwYZpJ1KXEPj4+z6OohXN14AQMcaiafL+bmVLlg==
+
+babylonjs-gui@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/babylonjs-gui/-/babylonjs-gui-4.0.3.tgz#a3e15dd8b4c494dbaf9bc23d554f5ac4c37e64e9"
+  integrity sha512-6SvWXKd1xsKTuYDKG/OGXXc3EfPrMt3vykYdqqTngxA1smwj0LGLc2WGj3b6IXDSq9/lxQjhYlr+TlhQ6kuUqg==
+  dependencies:
+    babylonjs "4.0.3"
+
+babylonjs-inspector@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/babylonjs-inspector/-/babylonjs-inspector-4.0.3.tgz#6a4c2813080c017ffb35967e333e177d8c079755"
+  integrity sha512-HwSiBURtg+kk2FW5dOcaGYBU8WqHihHGhJnJ4SQDQzmklsrwKf4pGp16S+StWmy3B+XT+vOtCHtM1DQt/cP5YA==
+  dependencies:
+    "@types/react" "~16.7.3"
+    "@types/react-dom" "~16.0.9"
+    babylonjs "4.0.3"
+    babylonjs-gltf2interface "4.0.3"
+    babylonjs-gui "4.0.3"
+    babylonjs-loaders "4.0.3"
+    babylonjs-serializers "4.0.3"
+
+babylonjs-loaders@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/babylonjs-loaders/-/babylonjs-loaders-4.0.3.tgz#aab7fbc695eed29ebe7971e4d9797a385bd365dc"
+  integrity sha512-pdJElZpxZlh/c0wVeDcxhcQ2y5TRvEKbhO8HEiMo43At0FQm281EpIYIvvpWBkmNcPQoYJig63RSJxR9vHtUhw==
+  dependencies:
+    babylonjs "4.0.3"
+    babylonjs-gltf2interface "4.0.3"
+
+babylonjs-serializers@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/babylonjs-serializers/-/babylonjs-serializers-4.0.3.tgz#7add6c6609f75d0a44ad5db5d68b6e9e2fabde87"
+  integrity sha512-31MtGNIy6Bu67XDZXGXm3hlVQ8bXcNcrydMwwmoEsoFXRegbGKP5pJsyNKtDdt5cMW5FN2u7ZjbaOlTez6+C4g==
+  dependencies:
+    babylonjs "4.0.3"
+    babylonjs-gltf2interface "4.0.3"
 
 babylonjs@4.0.3:
   version "4.0.3"
@@ -1714,6 +1783,11 @@ cssstyle@^1.0.0:
   integrity sha512-43wY3kl1CVQSvL7wUY1qXkxVGkStjpkDmVjiIKX8R97uhajy8Bybay78uOtqvh7Q5GK75dNPfW0geWjE6qQQow==
   dependencies:
     cssom "0.3.x"
+
+csstype@^2.2.0:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.4.tgz#d585a6062096e324e7187f80e04f92bd0f00e37f"
+  integrity sha512-lAJUJP3M6HxFXbqtGRc0iZrdyeN+WzOWeY0q/VnFzI+kqVrYIzC7bWlKqCW7oCIdzoPkvfp82EVvrTlQ8zsWQg==
 
 dashdash@^1.12.0:
   version "1.14.1"
