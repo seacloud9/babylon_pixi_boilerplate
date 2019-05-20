@@ -1,7 +1,7 @@
 import * as BABYLON from "babylonjs";
 import "babylonjs-inspector";
 import {pixiScene} from "./pixi";
-import {shaderToyMaterial, shaderToyProcText} from "./shadersMaterials";
+import {shaderToyMaterial, shaderToyProcText} from "./shaders";
 
 const canvas: any = document.getElementById("canvas");
 

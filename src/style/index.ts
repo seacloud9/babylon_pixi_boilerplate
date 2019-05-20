@@ -17,9 +17,8 @@ export const retroGoldGradient = new PIXI.TextStyle({
 });
 
 export const postSpectacularGradient = new PIXI.TextStyle({
-    fontFamily: "Press Start 2P",
+    fontFamily: "Orbitron",
     fontSize: 72,
-    fontStyle: "italic",
     fontWeight: "bold",
     fill: ["#6a11cb", "#2575fc"], // gradient
     stroke: "#4facfe",
