@@ -2,7 +2,7 @@ import * as PIXI from "pixi.js";
 export const retroGoldGradient = new PIXI.TextStyle({
     fontFamily: "Press Start 2P",
     fontSize: 36,
-    fontStyle: "italic",
+
     fontWeight: "bold",
     fill: ["#fcb69f", "#f6d365"], // gradient
     stroke: "#e6e9f0",
@@ -18,7 +18,7 @@ export const retroGoldGradient = new PIXI.TextStyle({
 
 export const postSpectacularGradient = new PIXI.TextStyle({
     fontFamily: "Orbitron",
-    fontSize: 72,
+    fontSize: 50,
     fontWeight: "bold",
     fill: ["#6a11cb", "#2575fc"], // gradient
     stroke: "#4facfe",

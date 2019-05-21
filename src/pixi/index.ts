@@ -19,13 +19,13 @@ export const pixiScene = (engine: any, canvas: any): any => {
     stage.addChild(sprite);
     const inserCoin = "Insert Coins";
     const richText = new PIXI.Text(inserCoin, retroGoldGradient);
-    richText.x = canvas.width / 2 - ((inserCoin.length / 2)  * 18);
+    richText.x = canvas.width / 2 - ((inserCoin.length / 2)  * 40);
     richText.y = canvas.height / 2 + 320;
     stage.addChild(richText);
 
     const postText = "P05T 5P3CTACU1AR DEMOSCENE";
     const richText2 = new PIXI.Text(postText, postSpectacularGradient);
-    richText2.x = canvas.width / 2 - ((postText.length / 2)  * 42);
+    richText2.x = canvas.width / 2 - ((postText.length / 2)  * 32);
     richText2.y = canvas.height / 2 - 320;
     stage.addChild(richText2);
 

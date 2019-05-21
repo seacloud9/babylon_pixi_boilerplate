@@ -1,5 +1,6 @@
 import * as BABYLON from "babylonjs";
 // shader toy fragment example
+// https://www.shadertoy.com/view/4l2XWh
 BABYLON.Effect.ShadersStore.shaderToyPixelShader = `
             uniform float time;
             uniform vec2 mousePos;

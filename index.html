@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>BabylonJS Playground</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet" /> 
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet" /> 
     <style>
       html, body {
         overflow: hidden;
@@ -15,9 +17,34 @@
         width: 100%;
         height: 100%;
       }
-      @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
-      @import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
     </style>
+    <script>
+      // implmenting lame anti-pattern http://www.enea.sk/blog/preloading-web-font-pixi.js.html #meh
+    window.onload = function()
+      {
+        WebFont.load(
+          {
+            // this event is triggered when the fonts have been rendered, see https://github.com/typekit/webfontloader
+            active : function()
+            {
+              // let browser take a breath. Some fonts may require more room for taking deep breath
+              setTimeout(function()
+              {
+                start();
+              }, 500); 
+            },
+            
+            // when font is loaded do some magic, so font can be correctly rendered immediately after PIXI is initialized
+            fontloading : doMagic,
+            
+            // multiple fonts can be passed here
+            google :
+            {
+              families: [ fontName ]
+            }
+          });
+        };
+    </script>
   </head>
   <body>
     <canvas id="canvas"></canvas>
