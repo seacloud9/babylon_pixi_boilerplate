@@ -106,6 +106,7 @@ window.onload = () => {
     },
     // when font is loaded do some magic, so font can be correctly rendered immediately after PIXI is initialized
     // place loader logic below
+    /*eslint no-useless-escape: "error"*/
     fontloading : () => {
       console.log(`
       \n

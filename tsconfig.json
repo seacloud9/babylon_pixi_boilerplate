@@ -3,7 +3,7 @@
     "module": "commonjs",
     "jsx": "preserve",
     "esModuleInterop": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "allowJs": true,
     "lib": [
       "es6",
