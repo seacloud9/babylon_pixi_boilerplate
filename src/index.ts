@@ -84,7 +84,8 @@ export const start = () => {
        time += 0.01;
        customProcText.setFloat("time", time);
    });
-
+  const loader = document.querySelectorAll(".is-active")[0];
+  loader.className = loader.className.replace("is-active", "");
   engine.runRenderLoop(() => {
   scene.render();
   engine.wipeCaches(true);

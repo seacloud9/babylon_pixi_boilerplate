@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>BabylonJS Playground</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <link rel="stylesheet" href="vendor/css/css-loader.css">
     <style>
       html, body {
         overflow: hidden;
@@ -16,9 +16,36 @@
         width: 100%;
         height: 100%;
       }
+
+      .loader-double:before {
+          width: 64px;
+          height: 64px;
+          border-color: #ed0738;
+          border-right-color: transparent;
+          animation-duration: 2s;
+          top: calc(50% - 32px);
+          left: calc(50% - 32px);
+      }
+      .loader.is-active {
+          background-color: rgba(8, 43, 111, 0.85);
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+      }
+      .loader-double:after {
+        width: 48px;
+        height: 48px;
+        border-color: #d400ff;
+        border-left-color: transparent;
+        top: calc(50% - 24px);
+        left: calc(50% - 24px);
+    }
     </style>
   </head>
   <body>
+    <div class="loader loader-default"></div>
+    <div class="loader loader-double is-active"></div>
     <canvas id="canvas"></canvas>
     <script src="src/index.ts"></script>
   </body>
