@@ -97,7 +97,7 @@ export const start = () => {
 });
 };
 
-window.onload = () => {
+const loadAllContent = () => {
   WebFont.load(
     {
     // this event is triggered when the fonts have been rendered, see https://github.com/typekit/webfontloader
@@ -129,3 +129,5 @@ window.onload = () => {
     },
   });
 };
+
+loadAllContent();
