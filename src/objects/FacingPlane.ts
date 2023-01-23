@@ -1,8 +1,21 @@
-import { Scene, StandardMaterial, Texture, Vector3 } from "babylonjs";
-import FacingPlane from "./FacingPlane";
+import {
+  Mesh,
+  MeshBuilder,
+  Scene,
+  Vector3,
+  Texture,
+  StandardMaterial
+} from "babylonjs";
 
-export default class SokobanPlane extends FacingPlane {
+/**
+ * Unused, it is hard to instantiate this.
+ * Remove "extends Plane" and try again.
+ */
+export default class FacingPlane {
+  facingPlane: Mesh;
+  scene: Scene;
   url: string;
+
   constructor(
     scene: Scene,
     url: string,
@@ -11,11 +24,21 @@ export default class SokobanPlane extends FacingPlane {
     position: Vector3 = new Vector3(0, height / 2, 0),
     rotation: Vector3 = new Vector3(0, 0, 0)
   ) {
-    super(scene, width, height, position, rotation);
     this.url = url;
+    this.scene = scene;
+    this.facingPlane = MeshBuilder.CreatePlane("facingPlane", {
+      width: width,
+      height: height
+    });
+    this.facingPlane.position = position;
+    this.facingPlane.rotation = rotation;
+    console.log("facing plane created");
+
+    // This makes it always face the camera
+    this.facingPlane.billboardMode = Mesh.BILLBOARDMODE_Y;
+
     this.paint();
   }
-
   async paint() {
     await this.loadAssets();
     const testMat = new StandardMaterial("player_01", this.scene);
@@ -31,7 +54,6 @@ export default class SokobanPlane extends FacingPlane {
     testMat.backFaceCulling = false;
     this.facingPlane.material = testMat;
   }
-
   async loadAssets() {
     /*
     return new Promise((resolve) => {
