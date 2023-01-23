@@ -8,6 +8,7 @@ import {
   Vector3
 } from "babylonjs";
 import FacingPlane from "../planes/FacingPlane";
+import SokobanPlane from "../planes/SokobanPlane";
 import BaseScene from "./BaseScene";
 
 export default class ExampleScene extends BaseScene {
@@ -15,7 +16,12 @@ export default class ExampleScene extends BaseScene {
     // This creates and positions a free camera (non-mesh)
     const camera = new FreeCamera("camera1", new Vector3(0, 5, -10), this);
 
-    const facingPlane = new FacingPlane(this);
+    const facingPlane = new SokobanPlane(
+      this,
+      "./demoassets/player/player_01.png",
+      5,
+      5
+    );
 
     // This targets the camera to scene origin
     camera.setTarget(Vector3.Zero());
@@ -28,16 +34,6 @@ export default class ExampleScene extends BaseScene {
 
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
-
-    // Our built-in 'sphere' shape.
-    var sphere = MeshBuilder.CreateSphere(
-      "sphere",
-      { diameter: 2, segments: 32 },
-      this
-    );
-
-    // Move the sphere upward 1/2 its height
-    sphere.position.y = 1;
 
     // Our built-in 'ground' shape.
     const ground = MeshBuilder.CreateGround(
